@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:slash_homepage/UI/parts/recommended.dart';
 import 'package:slash_homepage/data/repository.dart';
 import 'package:slash_homepage/models/item_model.dart';
 

@@ -9,13 +9,13 @@ class Trends extends StatefulWidget {
 
 class _MyTrendsState extends State<Trends> {
   
-  @override
   List<String> images = [
     'assets/images/trend_poster_1.png',
     'assets/images/trend_poster_2.png',
   
   ];
   var currentIndex=0;
+  @override
   Widget build(BuildContext context) {
  var width=MediaQuery.of(context).size.width;
   var height=MediaQuery.of(context).size.height;
@@ -32,7 +32,7 @@ class _MyTrendsState extends State<Trends> {
           width: width,
           
       
-          margin: EdgeInsets.symmetric(horizontal: 2),
+          margin:const EdgeInsets.symmetric(horizontal: 2),
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 0, 0, 0),
             borderRadius: BorderRadius.circular(7),
@@ -49,11 +49,11 @@ class _MyTrendsState extends State<Trends> {
     );
   }).toList(),
 ),
-          CursorIndicator(),
+          cursorIndicator(),
 ]);
     
   }
-   CursorIndicator(){
+   cursorIndicator(){
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -62,7 +62,7 @@ class _MyTrendsState extends State<Trends> {
         return Container(
           width:   currentIndex == index?12: 6,
           height:  6,
-          margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 1),
+          margin:const EdgeInsets.symmetric(vertical: 10.0, horizontal: 1),
           decoration: BoxDecoration(
             shape:BoxShape.rectangle,
             borderRadius: BorderRadius.circular(5),

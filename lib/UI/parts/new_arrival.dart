@@ -1,6 +1,5 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
-import 'package:slash_homepage/UI/widgets/Listing_new_arrival.dart';
+import 'package:slash_homepage/UI/widgets/listing_new_arrival.dart';
 
 class NewArrival extends StatefulWidget {
   
@@ -66,7 +65,7 @@ class _NewArrivalState extends State<NewArrival> {
 const SizedBox(
   height: 12,
 ),
-      ListingNewArrival(),
+     const ListingNewArrival(),
       ],
     );
 }

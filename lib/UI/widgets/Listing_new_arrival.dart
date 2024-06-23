@@ -1,10 +1,7 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_homepage/bloc/new_arrival_bloc.dart';
-import 'package:slash_homepage/models/item_model.dart';
 import 'package:slash_homepage/UI/widgets/item.dart';
 
 class ListingNewArrival extends StatefulWidget {
@@ -36,7 +33,7 @@ class _ListingNewArrivalState extends State<ListingNewArrival> {
     return BlocBuilder< NewArrivalBloc, DataState>(
       builder: (context, state) {
         if (state is  NewDataLoadingState) {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         } else if (state is NewDataLoadedState) {
           var list = state.data; //
           var width = MediaQuery.of(context).size.width;

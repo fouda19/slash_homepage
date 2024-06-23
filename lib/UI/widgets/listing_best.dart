@@ -1,7 +1,6 @@
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_homepage/bloc/best_selling_bloc.dart';
 import 'package:slash_homepage/models/item_model.dart';
@@ -15,7 +14,7 @@ class ListingBest extends StatefulWidget {
 }
 
 class _ListingState extends State<ListingBest> {
-  List<ItemModel> itemsList = []; // Renamed to avoid shadowing
+  List<ItemModel> itemsList = []; 
 
   @override
   void initState() {
@@ -30,11 +29,11 @@ class _ListingState extends State<ListingBest> {
     return BlocBuilder<DataBloc, DataState>(
       builder: (context, state) {
         if (state is BestDataLoadingState) {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         } else if (state is BestDataLoadedState) {
           var list = state.data;
           var width = MediaQuery.of(context).size.width;
-          return Container(
+          return  Container(
             width: width,
             height: MediaQuery.of(context).size.height * 0.22,
             child: ListView.builder(

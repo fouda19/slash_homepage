@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:slash_homepage/UI/widgets/Listing_best.dart';
 
@@ -68,7 +67,7 @@ class _BestSellingState extends State<BestSelling> {
         const SizedBox(
           height: 12,
         ),
-      ListingBest(),
+     const ListingBest(),
       ],
     );
   }

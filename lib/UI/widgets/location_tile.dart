@@ -8,36 +8,36 @@ class Location extends StatefulWidget {
 }
 
 class _MyLocationState extends State<Location> {
-  @override
   var place = 'Nasr city';
   var city='Cairo';
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: Row(
         children: [
-          Icon(
+        const  Icon(
             Icons.location_on,
             color: Colors.black,
             size: 18,
           ),
-          SizedBox(width: 5,),
+        const  SizedBox(width: 5,),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 place,
-                style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400, fontSize: 11),
+                style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w400, fontSize: 11),
               ),
               
               Text(
                 city,
-                style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 11),
+                style:const TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 11),
               ),
             ],
           ),
           IconButton(
               onPressed: () => {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.keyboard_arrow_down_sharp,
                 color: Colors.black,
                 size: 18,

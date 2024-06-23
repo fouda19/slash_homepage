@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
             create: (context) => newArrivalBloc,
           ),
         ],
-        child: AppPage(),
+        child:const AppPage(),
       ),
     );
   }

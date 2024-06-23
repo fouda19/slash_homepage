@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:slash_homepage/models/categories_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:slash_homepage/UI/widgets/categories_tile.dart';
@@ -13,19 +11,18 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  @override
 List<Category> categories = [
   Category(title: 'Fashion', icon: FontAwesomeIcons.tshirt),
   Category(title: 'Games', icon:FontAwesomeIcons.diceSix),
   Category(title: 'Accessories', icon: FontAwesomeIcons.eyeDropper),
-    Category(title: 'Games', icon:FontAwesomeIcons.diceSix),
-  Category(title: 'Accessories', icon: FontAwesomeIcons.eyeDropper),
+    Category(title: 'Books', icon:FontAwesomeIcons.bookOpen),
+  Category(title: 'Articles', icon: FontAwesomeIcons.newspaper),
   
   ];
 
+  @override
 
   Widget build(BuildContext context) {
-var width= MediaQuery.of(context).size.width;
     return  Column(
       children: [ 
       Container(
@@ -33,7 +30,7 @@ var width= MediaQuery.of(context).size.width;
   child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      Text(
+      const Text(
         'Categories',
         style: TextStyle(
           fontSize: 15,
@@ -44,14 +41,14 @@ var width= MediaQuery.of(context).size.width;
         padding: const EdgeInsets.only(right: 10),
         child: Row(
           children: [
-            Text(
+           const Text(
               'See all',
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(width: 5,),
+          const  SizedBox(width: 5,),
              InkWell(
               onTap: () => {//go to all categories page
               },
@@ -62,7 +59,7 @@ var width= MediaQuery.of(context).size.width;
                   color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(5),
                 ),
-                child: Icon(Icons.arrow_forward_ios_rounded,size: 12,),
+                child: const Icon(Icons.arrow_forward_ios_rounded,size: 12,),
                            
                            ),
              ),
@@ -73,7 +70,7 @@ var width= MediaQuery.of(context).size.width;
     ],
   ),
 ),
-SizedBox(
+const SizedBox(
   height: 12,
 ),
       
@@ -100,10 +97,7 @@ SizedBox(
       
        itemWidth = MediaQuery.of(context).size.width / itemsOnScreen;
       }
-      // else
-      // {
-      //  itemWidth=width*0.2;
-      // }
+
 
             return SizedBox( 
               width: itemWidth,

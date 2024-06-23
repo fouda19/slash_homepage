@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 class CategoriesTile extends StatefulWidget {
   final IconData icon;
   final String title;
@@ -25,12 +24,13 @@ class _CategoriesTileState extends State<CategoriesTile> {
         child: Column(
           children: [ CircleAvatar(
             radius: 22,
-            backgroundColor: Color.fromARGB(255, 39, 38, 38),
-            child: Icon(widget.icon ,color: Colors.white, size: 18,),
+            backgroundColor: const Color.fromARGB(255, 39, 38, 38),
+            child: Padding( padding:const EdgeInsets.only(right: 2), 
+              child: Icon(widget.icon ,color: Colors.white, size: 18,)),
           ),
-            SizedBox(height: 3,),
+           const SizedBox(height: 3,),
             Text(widget.title
-              ,style: TextStyle(
+              ,style:const TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w400
               ),)

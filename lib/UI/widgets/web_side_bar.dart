@@ -1,9 +1,5 @@
-//i want a sidebar here 
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:slash_homepage/UI/screens/apppage.dart';
 class SideBar extends StatefulWidget {
   final OnClick? onClick;
@@ -14,8 +10,8 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> {
-  @override
   var currentIndex=0;
+  @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {

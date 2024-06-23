@@ -3,11 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:slash_homepage/UI/parts/best_selling.dart';
 import 'package:slash_homepage/UI/parts/new_arrival.dart';
 import 'package:slash_homepage/UI/parts/recommended.dart';
-import 'package:slash_homepage/UI/widgets/location_tile.dart';
 import 'package:slash_homepage/UI/widgets/search_part.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:slash_homepage/UI/widgets/trending_part.dart';
-import 'package:slash_homepage/UI/widgets/categories_tile.dart';
 import 'package:slash_homepage/UI/parts/categories_part.dart';
 
 
@@ -24,8 +22,8 @@ class _HomeState extends State<HomePage> {
   @override
  
   Widget build(BuildContext context) {
-    return  Container(
-      child: SingleChildScrollView(
+    return   Container(
+      child: const SingleChildScrollView(
         child: Column(
           mainAxisAlignment:MainAxisAlignment.start,
           children: <Widget>[

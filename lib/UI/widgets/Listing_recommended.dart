@@ -1,10 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_homepage/bloc/recommended_bloc.dart';
-import 'package:slash_homepage/models/item_model.dart';
 import 'package:slash_homepage/UI/widgets/item.dart';
 
 class ListingRecommended extends StatefulWidget {
@@ -37,7 +33,7 @@ class _ListingRecommendedState extends State<ListingRecommended> {
       builder: (context, state) {
 
         if (state is RecommendedDataLoadingState) {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         } else if (state is RecommendedDataLoadedState) {
           var list = state.data; //
           var width = MediaQuery.of(context).size.width;

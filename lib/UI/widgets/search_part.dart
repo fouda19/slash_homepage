@@ -31,7 +31,7 @@ class _MySearchState extends State<Search> {
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(5),
               ),
-              child: Row(
+              child:const Row(
                 children: [
                         SizedBox(width: 5,),
                   Icon(
@@ -55,7 +55,7 @@ class _MySearchState extends State<Search> {
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(5),
               ),
-              child: Icon(Icons.sort),
+              child:const Icon(Icons.sort),
             
             ),
           ],

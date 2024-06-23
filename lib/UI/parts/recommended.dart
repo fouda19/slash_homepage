@@ -1,6 +1,5 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
-import 'package:slash_homepage/UI/widgets/Listing_recommended.dart';
+import 'package:slash_homepage/UI/widgets/listing_recommended.dart';
 
 class Recommended extends StatefulWidget {
   
@@ -67,7 +66,7 @@ const SizedBox(
   height: 12,
 ),
       
-ListingRecommended(),
+const ListingRecommended(),
       ],
     );
 }
